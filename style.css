@@ -1,0 +1,494 @@
+
+/* 1. Cores que vamos reutilizar no site */
+:root {
+    --fundo: #0b1020;
+    --superficie: #151d33;
+    --texto: #f4f6ff;
+    --texto-secundario: #b7c0d8;
+    --destaque: #8b7cff;
+    --destaque-hover: #a69aff;
+}
+
+/* 2. Faz os tamanhos serem mais previsíveis */
+* {
+    box-sizing: border-box;
+}
+
+/* 3. Aparência geral da página */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: var(--fundo);
+    color: var(--texto);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+/* 4. Cabeçalho */
+.cabecalho {
+    padding: 24px 8%;
+    border-bottom: 1px solid #29324b;
+}
+
+.cabecalho h1 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+/* 5. Seções do portfólio */
+.secao {
+    width: min(100% - 40px, 1000px);
+    margin: 0 auto;
+    padding: 72px 0;
+    scroll-margin-top: 20px;
+}
+
+.secao h2 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    line-height: 1.2;
+}
+
+.secao p {
+    color: var(--texto-secundario);
+}
+
+
+/* Tela inicial do portfólio */
+#inicio {
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 48px 20px 32px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+/* Foto de perfil circular */
+.foto-perfil {
+    width: 124px;
+    height: 124px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--texto);
+    margin-bottom: 10px;
+}
+
+/* Nome */
+#inicio h2 {
+    margin: 0;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 400;
+}
+
+/* Descrição abaixo do nome */
+.descricao {
+    margin: 8px 0 42px;
+    font-size: 1.1rem;
+}
+
+/* Grupo dos três botões */
+.botoes {
+    width: min(100%, 590px);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Aparência dos botões */
+.botoes .botao {
+    width: 100%;
+    min-height: 62px;
+    padding: 16px 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid var(--texto-secundario);
+    border-radius: 10px;
+    background-color: transparent;
+    color: var(--texto);
+
+    font-size: 1.05rem;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+
+    transition: background-color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.botoes .botao:hover {
+    background-color: var(--superficie);
+    transform: translateY(-2px);
+}
+
+/* Redes sociais */
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+    margin-top: 56px;
+}
+
+.redes-sociais a {
+    color: var(--texto);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.redes-sociais a:hover {
+    color: var(--destaque);
+    text-decoration: underline;
+}
+
+/* Ajustes para celulares */
+@media (max-width: 600px) {
+    #inicio {
+        padding: 36px 20px;
+    }
+
+    .foto-perfil {
+        width: 108px;
+        height: 108px;
+    }
+
+    .descricao {
+        margin-bottom: 32px;
+    }
+
+    .botoes .botao {
+        min-height: 56px;
+    }
+
+    .redes-sociais {
+        margin-top: 40px;
+    }
+}
+
+
+/* 8. Cartão do projeto */
+.cartao-projeto {
+    max-width: 650px;
+    padding: 24px;
+    border: 1px solid #29324b;
+    border-radius: 16px;
+    background-color: var(--superficie);
+}
+
+.cartao-projeto h3 {
+    margin-top: 0;
+}
+
+/* 9. Rodapé */
+.rodape {
+    padding: 24px 8%;
+    border-top: 1px solid #29324b;
+    text-align: center;
+}
+
+.rodape p {
+    margin: 0;
+    color: var(--texto-secundario);
+    font-size: 0.9rem;
+}
+
+/* 10. Ajustes para telas pequenas */
+@media (max-width: 600px) {
+    .cabecalho {
+        padding: 20px;
+    }
+
+    .secao {
+        width: calc(100% - 40px);
+        padding: 52px 0;
+    }
+
+    #inicio {
+        min-height: 55vh;
+    }
+
+    .botoes {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .botao {
+        text-align: center;
+    }
+
+    .cartao-projeto {
+        padding: 18px;
+    }
+}
+/* Ícones das redes sociais */
+.redes-sociais a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--texto);
+    text-decoration: none;
+}
+
+.redes-sociais svg {
+    width: 24px;
+    height: 24px;
+}
+
+.redes-sociais a:hover {
+    color: var(--destaque);
+    transform: translateY(-2px);
+}
+
+/* Botão voltar ao início */
+#voltar-inicio {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 1000;
+
+    padding: 12px 18px;
+    border: none;
+    border-radius: 10px;
+
+    background-color: var(--destaque);
+    color: var(--texto);
+
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.2s ease,
+                transform 0.2s ease;
+}
+
+#voltar-inicio:hover {
+    background-color: var(--destaque-hover);
+    transform: translateY(-3px);
+}
+
+/* Ajuste para celulares */
+@media (max-width: 600px) {
+    #voltar-inicio {
+        right: 16px;
+        bottom: 16px;
+        padding: 10px 14px;
+        font-size: 12px;
+    }
+}
+
+/* Esconde as telas que não estão selecionadas */
+.tela[hidden] {
+    display: none !important;
+}
+
+/* Mantém o perfil separado do conteúdo */
+#inicio {
+    min-height: auto;
+    padding-bottom: 32px;
+}
+
+/* Os novos botões continuam com a aparência atual */
+.botoes .botao {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+/* Controle da navegação entre telas */
+.tela {
+    display: block;
+}
+
+.tela[hidden] {
+    display: none !important;
+}
+
+/* Os botões de navegação */
+.botoes .botao {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+/* Cards dos projetos */
+.cartao-projeto {
+    width: 100%;
+    max-width: 650px;
+    overflow: hidden;
+    padding: 0;
+    border: 1px solid #29324b;
+    border-radius: 16px;
+    background-color: var(--superficie);
+}
+
+.imagem-projeto {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-bottom: 1px solid #29324b;
+}
+
+.conteudo-projeto {
+    padding: 24px;
+}
+
+.conteudo-projeto h3 {
+    margin-top: 0;
+}
+
+.status-projeto {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 6px;
+    background-color: #242044;
+    color: var(--destaque-hover);
+    font-size: 0.85rem;
+}
+
+@media (max-width: 600px) {
+    .conteudo-projeto {
+        padding: 18px;
+    }
+}
+
+/* ===== BOTÕES DE NAVEGAÇÃO ===== */
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    width: 100%;
+    margin-top: 24px;
+}
+
+.botoes .botao {
+    padding: 12px 20px;
+    border: 2px solid var(--destaque);
+    border-radius: 10px;
+    background-color: transparent;
+    color: var(--texto);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+/* Efeito ao passar o mouse */
+.botoes .botao:hover {
+    background-color: var(--destaque);
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(139, 124, 255, 0.25);
+}
+
+/* Botão da seção que está aberta */
+.botoes .botao.ativo {
+    background-color: var(--destaque);
+    color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(139, 124, 255, 0.18);
+}
+
+/* Destaque ao navegar usando o teclado */
+.botoes .botao:focus-visible {
+    outline: 3px solid var(--destaque-hover);
+    outline-offset: 4px;
+}
+
+/* Ajustes para celulares */
+@media (max-width: 600px) {
+    .botoes {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0 12px;
+        box-sizing: border-box;
+    }
+
+    .botoes .botao {
+        width: 100%;
+    }
+}
+/* NOVA PALETA DE CORES */
+:root {
+    --fundo: #101010;
+    --superficie: #202020;
+    --texto: #F5F5F5;
+    --texto-secundario: #B8B8B8;
+    --destaque: #D62828;
+    --destaque-hover: #F4C542;
+}
+
+/* Aplicação das cores */
+body {
+    background-color: #101010;
+    color: #F5F5F5;
+}
+
+.cabecalho,
+.rodape {
+    border-color: #363636;
+}
+
+.secao p {
+    color: #B8B8B8;
+}
+
+.cartao-projeto {
+    background-color: #202020;
+    border-color: #363636;
+}
+
+.botoes .botao {
+    border-color: #D62828;
+    color: #F5F5F5;
+}
+
+.botoes .botao:hover,
+.botoes .botao.ativo {
+    background-color: #D62828;
+    border-color: #F4C542;
+    color: #F5F5F5;
+}
+
+.redes-sociais a:hover {
+    color: #F4C542;
+}
+
+.status-projeto {
+    background-color: #332B18;
+    color: #F4C542;
+}
+
+#voltar-inicio {
+    background-color: #D62828;
+    color: #F5F5F5;
+}
+
+#voltar-inicio:hover {
+    background-color: #F4C542;
+    color: #101010;
+}
+
+.botoes .botao:focus-visible {
+    outline-color: #F4C542;
+}

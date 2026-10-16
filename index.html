@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meu Portfólio | Programa Trilhas</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <h1>Meu Portfólio</h1>
+    </header>
+
+    <main>
+        
+<section id="inicio" class="secao">
+    <img
+        src="imagens/perfil.jpg"
+        alt="Minha foto de perfil"
+        class="foto-perfil"
+    >
+
+    <h2>Aldemir Moraes</h2>
+
+    <p class="descricao">
+        Desenvolvedor Front-end no Programa Trilhas
+    </p>
+
+    
+
+<nav class="botoes" aria-label="Navegação do portfólio">
+    <button
+        type="button"
+        class="botao"
+        data-tela="sobre"
+        aria-controls="sobre"
+        aria-pressed="false"
+    >
+        Sobre mim
+    </button>
+
+    <button
+        type="button"
+        class="botao"
+        data-tela="projetos"
+        aria-controls="projetos"
+        aria-pressed="false"
+    >
+        Veja meus projetos
+    </button>
+
+    <button
+        type="button"
+        class="botao"
+        data-tela="certificados"
+        aria-controls="certificados"
+        aria-pressed="false"
+    >
+        Acesse meus certificados
+    </button>
+</nav>
+
+<div class="redes-sociais">
+    <a
+        href="https://github.com/Junior-Moraes"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Meu GitHub"
+    >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.54v-2.1c-3.1.67-3.76-1.32-3.76-1.32-.5-1.28-1.23-1.62-1.23-1.62-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15 1 .1.76 2.02 3.3 1.36.1-.72.39-1.22.7-1.5-2.47-.28-5.07-1.24-5.07-5.51 0-1.22.44-2.21 1.15-2.99-.12-.28-.5-1.42.11-2.95 0 0 .94-.3 3.05 1.14a10.6 10.6 0 0 1 5.55 0c2.12-1.44 3.05-1.14 3.05-1.14.61 1.53.23 2.67.12 2.95.71.78 1.14 1.77 1.14 2.99 0 4.28-2.6 5.23-5.08 5.5.4.35.75 1.03.75 2.08v3.1c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/>
+        </svg>
+    </a>
+
+    <a
+        href="https://www.linkedin.com/in/junior-undefined-845985442/?isSelfProfile=true"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Meu LinkedIn"
+    >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96c0 .84.69 1.52 1.55 1.52h16.9c.86 0 1.55-.68 1.55-1.52V3.52c0-.84-.69-1.52-1.55-1.52ZM7.93 18.73H4.97V9.2h2.96v9.53ZM6.45 7.9a1.72 1.72 0 1 1 0-3.44 1.72 1.72 0 0 1 0 3.44Zm12.28 10.83h-2.96v-4.64c0-1.11-.02-2.54-1.55-2.54-1.55 0-1.79 1.2-1.79 2.46v4.72H9.47V9.2h2.84v1.3h.04c.4-.75 1.36-1.54 2.8-1.54 3 0 3.58 1.97 3.58 4.53v5.24Z"/>
+        </svg>
+    </a>
+</div>
+
+</section>
+
+<section id="tela-inicio" class="secao tela">
+    <h2>Bem-vindo ao meu portfólio!</h2>
+    <p>
+        Conheça um pouco sobre mim, meus projetos e minha
+        trajetória no Programa Trilhas.
+    </p>
+</section>
+
+<section id="sobre" class="secao tela" hidden>
+    <h2>Sobre mim</h2>
+    <p>
+        Olá! Estou aprendendo desenvolvimento web no Programa Trilhas.
+        Tenho interesse em tecnologia, programação e criação de projetos.
+        Meu objetivo é desenvolver minhas habilidades e criar soluções úteis.
+    </p>
+</section>
+
+
+<section id="projetos" class="secao tela" hidden>
+    <h2>Meus projetos</h2>
+
+    <article class="cartao-projeto">
+        
+<img
+    src="imagens/portifolio.png"
+    alt="Captura de tela do meu portfólio"
+    class="imagem-projeto"
+>
+
+        <div class="conteudo-projeto">
+            <h3>Meu primeiro portfólio</h3>
+
+            <p>
+                Meu primeiro projeto de desenvolvimento Front-end,
+                criado com HTML, CSS e JavaScript durante o
+                Programa Trilhas.
+            </p>
+
+            <span class="status-projeto">
+                Projeto em desenvolvimento
+            </span>
+        </div>
+    </article>
+</section>
+
+
+<section id="certificados" class="secao tela" hidden>
+    <h2>Meus certificados</h2>
+    <p>
+        Aqui vou reunir os certificados dos cursos e das atividades
+        que concluir durante minha formação.
+    </p>
+</section>
+
+    </main>
+
+    <footer class="rodape">
+        <p>Meu Portfólio — Programa Trilhas</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
